@@ -28,7 +28,7 @@ export default function MyDialog({ isDialogOpen, setDialogOpen, text }) {
           overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0.1)',
             zIndex: 1000,
-            backdropFilter: 'blur(5px)'
+          
           },
           content: {
             top: '50%',

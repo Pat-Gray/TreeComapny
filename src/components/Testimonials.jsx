@@ -74,7 +74,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="pt-12 bg-gray-50">
+    <section className="pt-12 bg-gray-50" id="testimonials">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold text-center text-[#2B5329] mb-12"

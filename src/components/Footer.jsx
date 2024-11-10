@@ -133,7 +133,7 @@ const Footer = () => {
                 Quick Links
               </motion.h3>
               <ul className="space-y-2">
-                {['services', 'about', 'testamonials', 'contact'].map((section, index) => (
+                {['services', 'about', 'testimonials', 'contact'].map((section, index) => (
                   <motion.li
                     key={section}
                     variants={itemVariants}
