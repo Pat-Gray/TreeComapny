@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
+import WhiteLogo from '../assets/logoWhite.png';
 const Footer = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -68,7 +68,7 @@ const Footer = () => {
               transition={{ duration: 0.2 }}
             >
               <motion.img 
-                src="../public/logoWhite.png" 
+                src={WhiteLogo} 
                 alt="Tree Company Logo" 
                 className="h-24 w-auto"
                 initial={{ opacity: 0, rotate: -10 }}

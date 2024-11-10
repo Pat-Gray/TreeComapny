@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import MyDialog from './MyDialog';
+
+import logo from '../assets/logo.png';
+
 
 const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +33,7 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
             scrollToSection('home');
           }}>
             <img 
-              src="../public/logo.png" 
+              src={logo} 
               alt="Tree Company Logo" 
               className="h-20 w-auto"
             />

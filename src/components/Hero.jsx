@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import HeroImage from '../assets/Hero.jpg'
 
 const Hero = ({isDialogOpen, setDialogOpen, MyDialog}) => {
   return (
@@ -11,7 +12,7 @@ const Hero = ({isDialogOpen, setDialogOpen, MyDialog}) => {
         transition={{ duration: 1.5 }}
       >
         <img
-          src="../public/hero.jpg"
+          src={HeroImage}
           alt="Wanaka Tree Service"
           className="w-full h-full object-cover"
         />
