@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 
 import logo from '../assets/logo.png';
@@ -109,15 +110,7 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
           } overflow-hidden bg-white shadow-lg rounded-b-xl`}
         >
           <div className="p-4 space-y-3">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="flex items-center w-full px-4 py-3 text-gray-700 hover:text-[#2B5329] hover:bg-gray-50 rounded-lg transition-all"
-            >
-              <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              Home
-            </button>
+            
             <button
               onClick={() => scrollToSection('services')}
               className="flex items-center w-full px-4 py-3 text-gray-700 hover:text-[#2B5329] hover:bg-gray-50 rounded-lg transition-all"

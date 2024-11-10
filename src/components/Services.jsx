@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-export default function Services() {
+export default function Services({isDialogOpen, setDialogOpen, MyDialog}) {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -143,27 +143,34 @@ export default function Services() {
                 <p className="text-gray-600">
                   {service.description}
                 </p>
-                <motion.button 
-                  onClick={() => scrollToSection('quote')}
-                  className="mt-4 bg-[#2B5329] text-white px-4 py-2 rounded-full hover:bg-[#1a331a] transition-colors inline-flex items-center"
+                <motion.div 
+                  className="mt-4"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Book a Quote
-                  <svg 
-                    className="w-4 h-4 ml-2" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth="2" 
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </motion.button>
+                  <MyDialog 
+                    isDialogOpen={isDialogOpen} 
+                    setDialogOpen={setDialogOpen} 
+                    text={
+                      <div className="bg-[#2B5329] text-white px-4 py-2 rounded-full hover:bg-[#1a331a] transition-colors inline-flex items-center">
+                        Book a Quote
+                        <svg 
+                          className="w-4 h-4 ml-2" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth="2" 
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </div>
+                    }
+                  />
+                </motion.div>
               </div>
             </motion.div>
           ))}

@@ -20,7 +20,7 @@ function App() {
       <Nav isDialogOpen={isDialogOpen} setDialogOpen={setDialogOpen} MyDialog={MyDialog}/>
       <Hero isDialogOpen={isDialogOpen} setDialogOpen={setDialogOpen} MyDialog={MyDialog}/>
       <About isDialogOpen={isDialogOpen} setDialogOpen={setDialogOpen} MyDialog={MyDialog}/>
-      <Services />
+      <Services   isDialogOpen={isDialogOpen} setDialogOpen={setDialogOpen} MyDialog={MyDialog}/>
       <Team />
       <Testimonials />
       <FacebookFeed />
