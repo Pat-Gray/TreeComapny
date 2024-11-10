@@ -9,6 +9,7 @@ import FacebookFeed from './components/FacebookFeed';
 import Team from './components/Team';
 import MyDialog from './components/MyDialog'
 import { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   const [isDialogOpen, setDialogOpen] = useState(false);
@@ -25,6 +26,7 @@ function App() {
       <FacebookFeed />
       <Contact />
       <Footer />
+      <SpeedInsights />
     </>
   )
 }
