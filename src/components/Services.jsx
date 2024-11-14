@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Pruning from '../assets/pruning.jpg'
+import TreeRemoval from '../assets/treeremoval.jpg'
+import Milling from '../assets/milling.jpg'
+import Bracing from '../assets/treebracing.jpg'
 
 export default function Services({isDialogOpen, setDialogOpen, MyDialog}) {
   const [ref, inView] = useInView({
@@ -33,12 +37,12 @@ export default function Services({isDialogOpen, setDialogOpen, MyDialog}) {
     {
       title: "Tree Pruning & Crown Care",
       description: "Expert pruning services including crown lifting, thinning, and reduction. We focus on improving tree health, safety, and aesthetics while maintaining natural form. Specializing in both young tree formation and mature tree maintenance.",
-      image: "/images/pruning.jpg"
+      image: Pruning
     },
     {
       title: "Tree Removal",
       description: "Safe and efficient removal of trees in any location, from straightforward felling to technical dismantling in confined spaces. We donate to tree planting charities for every tree removed, supporting environmental sustainability.",
-      image: "/images/tree-removal.jpg"
+      image: TreeRemoval
     },
     {
       title: "Emergency Services",
@@ -53,12 +57,12 @@ export default function Services({isDialogOpen, setDialogOpen, MyDialog}) {
     {
       title: "Tree Support Systems",
       description: "Installation of professional bracing and support systems for at-risk trees. Combining cable systems with crown reduction to preserve tree form while ensuring safety.",
-      image: "/images/health-assessment.jpg"
+      image: Bracing
     },
     {
-      title: "Wood Chipping",
-      description: "Complete wood processing services including log milling for valuable timber and wood chipping for garden mulch. We promote sustainable recycling of all tree materials.",
-      image: "/images/site-clearing.jpg"
+      title: "Wood Chipping & Log Milling",
+      description: " Too good for firewood? We can slab your valuable timber and help stack it for drying on your property.",
+      image: Milling
     },
     {
       title: "Tree Planting & Advice",
@@ -67,7 +71,7 @@ export default function Services({isDialogOpen, setDialogOpen, MyDialog}) {
     },
     {
       title: "Specialized Installations",
-      description: "Professional installation of tree lighting, bird boxes, rope swings, and other tree accessories. We also offer rescue services for stranded items in trees.",
+      description: "We can help install lights, bird boxes, zip lines, rope swings or rescuing cats and drones. Any excuse to climb a tree!",
       image: "/images/crown-reduction.jpg"
     }
   ];
