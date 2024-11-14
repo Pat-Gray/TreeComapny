@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply font-montserrat;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}

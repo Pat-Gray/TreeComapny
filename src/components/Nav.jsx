@@ -36,12 +36,9 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
             <img 
               src={logo} 
               alt="Tree Company Logo" 
-              className="h-20 w-auto"
+              className="h-20 w-auto p-2"
             />
-            <span className="font-bold text-2xl text-black">Tree Company <br/><span className="text-lg">
-              Wanaka | Hawea
-              </span>
-              </span>
+           
           </a>
 
           {/* Desktop Navigation */}

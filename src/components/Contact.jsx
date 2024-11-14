@@ -1,9 +1,18 @@
-
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaEnvelope, FaFacebook, FaPhone } from 'react-icons/fa';
+import { useRef } from 'react';
+import WanakaTree from '../assets/WanakaTree.jpg';
 
 const Contact = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+  
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
+  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -52,15 +61,32 @@ const Contact = () => {
 
   return (
     <motion.section 
-      className="bg-gray-100 py-12" 
+      ref={containerRef}
+      className="relative bg-gray-100 py-24 min-h-[600px] overflow-hidden"
       id="contact"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="container mx-auto px-4">
+      {/* Parallax Background */}
+      <motion.div 
+        className="absolute inset-0 z-0 h-[120%]"
+        style={{
+          y,
+          backgroundImage: `url(${WanakaTree})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          top: '-10%',
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+      </motion.div>
+
+      {/* Content container with vertical padding */}
+      <div className="container mx-auto px-4 relative z-10 py-12">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-8"
+          className="text-3xl font-bold text-center mb-8 text-white"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -81,7 +107,7 @@ const Contact = () => {
               href={item.href}
               target={item.target}
               rel={item.rel}
-              className="inline-flex items-center px-4 py-2 bg-[#2B5329] text-white rounded-lg hover:bg-[#1a331a] transition-colors space-x-2"
+              className="inline-flex items-center px-4 py-2 bg-[#2B5329] text-white rounded-lg hover:bg-[#1a331a] transition-colors space-x-2 backdrop-blur-sm bg-opacity-90"
               variants={itemVariants}
               whileHover={{ 
                 scale: 1.05,

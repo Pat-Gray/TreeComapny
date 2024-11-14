@@ -34,7 +34,7 @@ const Hero = ({isDialogOpen, setDialogOpen, MyDialog}) => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold text-white mb-4 font-serif"
+            className="text-5xl md:text-6xl font-bold text-white mb-4 font-montserrat"
           >
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -70,7 +70,9 @@ const Hero = ({isDialogOpen, setDialogOpen, MyDialog}) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.7 }}
         >
-          Professional Arborist Services - Keeping Your Trees Healthy and Your Property Safe
+          Professional Arborist Services  Its our mission to help keep trees healthy and our customers happy.
+         
+
         </motion.p>
 
         {/* CTA Button */}

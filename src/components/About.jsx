@@ -104,7 +104,7 @@ export default function About({isDialogOpen, setDialogOpen, MyDialog}) {
                 Your Trusted Tree Care Experts in Wanaka & Hawea
               </h2>
               <p className="text-lg text-gray-600">
-                Southern Alps Tree Care brings together expertise, passion, and local knowledge 
+                The Tree Company brings together expertise, passion, and local knowledge 
                 to deliver exceptional arborist services. Our certified team understands the unique 
                 challenges of maintaining trees in the Southern Alps region.
               </p>

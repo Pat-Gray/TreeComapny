@@ -62,7 +62,7 @@ export default function MyDialog({ isDialogOpen, setDialogOpen, text }) {
             {/* Call Button Section */}
             <div className="flex flex-col items-center space-y-4 pb-6 border-b border-gray-200">
               <a
-                href="tel:+1234567890"
+                href="tel:+64275166690"
                 className="flex items-center justify-center bg-[#2B5329] text-white px-8 py-3 rounded-lg hover:bg-[#1a331a] transition-colors w-full md:w-auto text-lg font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
