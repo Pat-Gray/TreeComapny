@@ -11,17 +11,11 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
     setIsOpen(!isOpen);
   };
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navHeight = 80; // Height of your navbar
-      const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({
-        top: elementPosition,
+  const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
         behavior: 'smooth'
-      });
-    }
-    setIsOpen(false); // Close mobile menu after clicking
+    });
   };
 
   return (
@@ -29,10 +23,7 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-3" onClick={(e) => {
-            e.preventDefault();
-            scrollToSection('home');
-          }}>
+          <a href="#home" className="flex items-center space-x-3" onClick={scrollToTop}>
             <img 
               src={logo} 
               alt="Tree Company Logo" 
@@ -45,25 +36,25 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
           <div className="hidden md:flex space-x-8">
             
             <button 
-              onClick={() => scrollToSection('services')}
+              onClick={() => scrollToTop()}
               className="text-gray-700 hover:text-[#2B5329] transition-colors font-semibold"
             >
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('team')}
+              onClick={() => scrollToTop()}
               className="text-gray-700 hover:text-[#2B5329] transition-colors font-semibold"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('testimonials')}
+              onClick={() => scrollToTop()}
               className="text-gray-700 hover:text-[#2B5329] transition-colors font-semibold"
             >
               Testimonials
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToTop()}
               className="text-gray-700 hover:text-[#2B5329] transition-colors font-semibold"
             >
               Contact
@@ -109,7 +100,7 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
           <div className="p-4 space-y-3">
             
             <button
-              onClick={() => scrollToSection('services')}
+              onClick={() => scrollToTop()}
               className="flex items-center w-full px-4 py-3 text-gray-700 hover:text-[#2B5329] hover:bg-gray-50 rounded-lg transition-all"
             >
               <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,7 +109,7 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
               Services
             </button>
             <button
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToTop()}
               className="flex items-center w-full px-4 py-3 text-gray-700 hover:text-[#2B5329] hover:bg-gray-50 rounded-lg transition-all"
             >
               <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,7 +118,7 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
               About
             </button>
             <button
-              onClick={() => scrollToSection('testimonials')}
+              onClick={() => scrollToTop()}
               className="flex items-center w-full px-4 py-3 text-gray-700 hover:text-[#2B5329] hover:bg-gray-50 rounded-lg transition-all"
             >
               <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,7 +127,7 @@ const Nav = ({isDialogOpen, setDialogOpen, MyDialog}) => {
               Testimonials
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToTop()}
               className="flex items-center w-full px-4 py-3 text-gray-700 hover:text-[#2B5329] hover:bg-gray-50 rounded-lg transition-all"
             >
               <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

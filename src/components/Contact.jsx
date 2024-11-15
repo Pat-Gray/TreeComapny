@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaEnvelope, FaFacebook, FaPhone } from 'react-icons/fa';
 import { useRef } from 'react';
-import WanakaTree from '../assets/WanakaTree.jpg';
+import WanakaTree from '../assets/WanakaTree.webp';
 
 const Contact = () => {
   const containerRef = useRef(null);

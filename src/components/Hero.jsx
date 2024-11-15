@@ -1,100 +1,81 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
-import HeroImage from '../assets/Hero.jpg'
+import HeroImage from '../assets/Hero.webp'
 
 const Hero = ({isDialogOpen, setDialogOpen, MyDialog}) => {
   return (
     <div className="relative h-screen">
       {/* Background Image with Overlay */}
-      <motion.div 
+      <div 
         className="absolute inset-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
       >
         <img
           src={HeroImage}
           alt="Wanaka Tree Service"
           className="w-full h-full object-cover"
         />
-        <motion.div 
+        <div 
           className="absolute inset-0 bg-black/40"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
         />
-      </motion.div>
+      </div>
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-center px-4 max-w-6xl mx-auto">
         {/* Main Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+        <div
+          
         >
-          <motion.h1 
+          <h1 
             className="text-5xl md:text-6xl font-bold text-white mb-4 font-montserrat"
           >
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+            <span
+              
               className="block"
             >
               Expert Tree Care
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
+            </span>
+            <span
+              
               className="block"
             >
               in Wanaka,
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
+            </span>
+            <span
+              
               className="block"
             >
               Hawea and Cromwell
-            </motion.span>
-          </motion.h1>
-        </motion.div>
+            </span>
+          </h1>
+        </div>
 
         {/* Subheading */}
-        <motion.p 
+        <p 
           className="text-xl md:text-2xl text-white mb-8 max-w-2xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.7 }}
+          
         >
           Professional Arborist Services  Its our mission to help keep trees healthy and our customers happy.
          
 
-        </motion.p>
+        </p>
 
         {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2 }}
+        <div
+          
         >
           <MyDialog 
             isDialogOpen={isDialogOpen} 
             setDialogOpen={setDialogOpen} 
             text={
-              <motion.span
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <span
+                
                 className="inline-block"
               >
                 Book a Free Quote
-              </motion.span>
+              </span>
             }
           />
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll Indicator */}
