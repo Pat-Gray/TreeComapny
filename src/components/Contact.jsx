@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaEnvelope, FaFacebook, FaPhone } from 'react-icons/fa';
-import { useRef } from 'react';
+import { lazy, useRef } from 'react';
 import WanakaTree from '../assets/WanakaTree.webp';
 
 const Contact = () => {
@@ -69,19 +69,19 @@ const Contact = () => {
       transition={{ duration: 0.8 }}
     >
       {/* Parallax Background */}
-      <motion.div 
-        className="absolute inset-0 z-0 h-[120%]"
+      <motion.img 
+        src={WanakaTree}
+        alt="Background"
+        className="absolute inset-0 z-0 h-[120%] object-cover"
+        loading="lazy"
         style={{
           y,
-          backgroundImage: `url(${WanakaTree})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          top: '-10%',
+          top: '-10%'
         }}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60" />
-      </motion.div>
+      />
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content container with vertical padding */}
       <div className="container mx-auto px-4 relative z-10 py-12">
