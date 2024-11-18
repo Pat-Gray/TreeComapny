@@ -72,16 +72,13 @@ const Contact = () => {
       <motion.img 
         src={WanakaTree}
         alt="Background"
-        className="absolute inset-0 z-0 h-[120%] object-cover"
+        className="absolute inset-0 z-0 h-[120%] w-full object-cover"
         loading="lazy"
-        style={{
-          y,
-          top: '-10%'
-        }}
+       
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/20" />
 
       {/* Content container with vertical padding */}
       <div className="container mx-auto px-4 relative z-10 py-12">
